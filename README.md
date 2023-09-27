@@ -1,5 +1,5 @@
 # my-userscripts
-JavaScript userscripts for the Tampermonkey extension (mostly for personal use and practice)
+Userscripts for the Tampermonkey extension (mostly for personal use and JavaScript practice)
 
 Userscripts are computer programs or scripts used to customize and enhance the functionality of websites or web applications by adding or modifying features and behaviors. Userscripts are typically written in JavaScript and can manipulate the content and behavior of web pages to suit the preferences and needs of the user.
  
