@@ -11,5 +11,5 @@ These scripts are tested primarily on Tampermonkey for Chrome and Chromium brows
 
 # Installation
 Make sure you have the latest version of [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) installed on your browser.
-Install [Greasy Fork Script Sorter](https://github.com/emukus/my-userscripts/raw/main/Greasy-Fork-Script-Sorter.user.js)
-Install [Letterboxd Film Duration Converter](https://github.com/emukus/my-userscripts/raw/main/Letterboxd-Film-Duration-Converter.user.js)
+* Install [Greasy Fork Script Sorter](https://github.com/emukus/my-userscripts/raw/main/Greasy-Fork-Script-Sorter.user.js)
+* Install [Letterboxd Film Duration Converter](https://github.com/emukus/my-userscripts/raw/main/Letterboxd-Film-Duration-Converter.user.js)
