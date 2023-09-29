@@ -8,3 +8,8 @@ Overall, userscripts are a versatile tool for customizing and personalizing the 
 I really enjoy coming up with and tinkering with pre-existing userscripts that I find on Greasy Fork so I finally decided to start uploading some of them to my github profile.
 
 These scripts are tested primarily on Tampermonkey for Chrome and Chromium browsers. As a result, there may be some performance and compatibility issues on Firefox alternatives such as Greasemonkey.
+
+# Installation
+Make sure you have the latest version of [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) installed on your browser.
+Install [Greasy Fork Script Sorter](https://github.com/emukus/my-userscripts/raw/main/Greasy-Fork-Script-Sorter.user.js)
+Install [Letterboxd Film Duration Converter](https://github.com/emukus/my-userscripts/raw/main/Letterboxd-Film-Duration-Converter.user.js)
