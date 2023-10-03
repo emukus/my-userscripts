@@ -9,7 +9,15 @@ I really enjoy coming up with and tinkering with pre-existing userscripts that I
  
 These scripts are tested primarily on Tampermonkey for Chrome and Chromium browsers. As a result, there may be some performance and compatibility issues on Firefox alternatives such as Greasemonkey.
  
+# Requirements
+Make sure you have the latest version of any of the following userscript managers installed on your browser:
+- [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo/)  (Recommended)
+- [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/) (Firefox)
+- [AdGuard Userscripts](https://kb.adguard.com/en/general/userscripts) ([Windows](https://kb.adguard.com/en/windows/features/extensions) and [macOS](https://kb.adguard.com/en/macos/features/extensions))
+- [AdGuard for Android](https://adguard.com/en/adguard-android/overview.html) (Settings > Extensions > New extension)
+- [Kiwi Browser on Android](https://play.google.com/store/apps/details?id=com.kiwibrowser.browser) (Supports Chrome desktop extensions)
+
+
 # Installation
-Make sure you have the latest version of [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo/) installed on your browser.
 * Install [Greasy Fork Script Sorter](https://github.com/emukus/my-userscripts/raw/main/Greasy-Fork-Script-Sorter.user.js)
 * Install [Letterboxd Film Duration Converter](https://github.com/emukus/my-userscripts/raw/main/Letterboxd-Film-Duration-Converter.user.js)
