@@ -24,3 +24,4 @@ Make sure you have the latest version of any of the following userscript manager
 * Install [PSARips - Add IMDb, TorrentGalaxy, Sonarr, and Radarr links in Post Titles](https://github.com/emukus/my-userscripts/raw/main/PSARips-Add-IMDb-TorrentGalaxy-Sonarr%2C%20and%20Radarr-links-in-Post-Titles.user.js)
 * Install [Audiobookbay - Add Magnet Link](https://github.com/emukus/my-userscripts/raw/main/Audiobookbay-Add-Magnet.user.js)
 * Install [Mute All Audio in Tab](https://github.com/emukus/my-userscripts/raw/main/Mute-All-Audio-in-Tab-Shortcut.user.js)
+* Install [Auto Click .torrent Links and Close Window](https://github.com/emukus/my-userscripts/raw/main/Auto-Click-torrent-Links-and-Close-Window.user.js)
