@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Greasy Fork Script Sorter
 // @namespace    http://github.com/emukus
-// @version      1.1
+// @version      1.2
 // @description  Always sort Greasy Fork scripts by 'Updated date'
 // @author       emukus
 // @icon         https://www.google.com/s2/favicons?domain=greasyfork.org&sz=64
