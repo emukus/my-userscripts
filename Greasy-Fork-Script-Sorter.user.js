@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Greasy Fork Script Sorter
-// @namespace    http://tampermonkey.net/
+// @namespace    http://github.com/emukus
 // @version      1.1
 // @description  Always sort Greasy Fork scripts by 'Updated date'
 // @author       emukus

@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Letterboxd Film Duration Converter
-// @namespace    https://your-namespace.example.com
+// @namespace    https://github.com/emukus
 // @version      1.0
 // @description  Converts film duration from minutes to hours and minutes on hover
 // @author       emukus

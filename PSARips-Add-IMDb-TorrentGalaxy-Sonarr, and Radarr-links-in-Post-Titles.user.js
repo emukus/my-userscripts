@@ -2,7 +2,7 @@
 // @name                PSARips - Add IMDb, TorrentGalaxy, Sonarr, and Radarr links in Post Titles
 // @description         Enhance post titles by adding links to IMDb, TorrentGalaxy, Sonarr, and Radarr
 // @version             1.6
-// @namespace           io.github.ni554n
+// @namespace           https://github.com/emukus
 // @match               https://psarips.*/movie/*
 // @match               https://psarips.*/tv-show/*
 // @match               https://psa.wf/movie/*
@@ -11,7 +11,7 @@
 // @match               https://psa.*/tv-show/*
 // @match               https://x265.club/movie/*
 // @match               https://x265.club/tv-show/*
-// @supportURL          https://github.com/ni554n/userscripts/issues
+// @supportURL          https://github.com/emukus/userscripts/issues
 // @license             MIT
 // @author              Nissan Ahmed, edited by emukus
 // @icon                https://www.google.com/s2/favicons?sz=64&domain=psa.wf
