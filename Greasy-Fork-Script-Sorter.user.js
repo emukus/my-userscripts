@@ -7,6 +7,7 @@
 // @icon         https://www.google.com/s2/favicons?domain=greasyfork.org&sz=64
 // @match        https://greasyfork.org/en/*
 // @exclude      /scripts/[0-9]*-[A-Za-z-]*
+// @exclude      /users/[0-9]*-[A-Za-z-]*/conversations
 // @grant        none
 // ==/UserScript==
 
