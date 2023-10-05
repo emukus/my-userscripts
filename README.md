@@ -25,3 +25,4 @@ Make sure you have the latest version of any of the following userscript manager
 * Install [Audiobookbay - Add Magnet Link](https://github.com/emukus/my-userscripts/raw/main/Audiobookbay-Add-Magnet.user.js)
 * Install [Mute All Audio in Tab](https://github.com/emukus/my-userscripts/raw/main/Mute-All-Audio-in-Tab-Shortcut.user.js)
 * Install [Auto Click .torrent Links and Close Window](https://github.com/emukus/my-userscripts/raw/main/Auto-Click-torrent-Links-and-Close-Window.user.js)
+* Install [Letterboxd Search Bars](https://github.com/emukus/my-userscripts/raw/main/Letterboxd-Search-Bars.user.js)
