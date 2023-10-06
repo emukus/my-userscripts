@@ -34,5 +34,5 @@
     });
 
     // Schedule window closure 5 seconds after the script execution
-    setTimeout(closeWindow, 8000); // 8000 milliseconds = 8 seconds
+    setTimeout(closeWindow, 8500); // 8000 milliseconds = 8 seconds
 })();
