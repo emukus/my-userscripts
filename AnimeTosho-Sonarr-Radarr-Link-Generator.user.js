@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         AnimeTosho Sonarr/Radarr Link Generator
 // @namespace    https://github.com/emukus
-// @version      1.1
-// @description  Create a Sonarr or Radarr link next to the title on AnimeTosho series pages
+// @version      1.2
+// @description  Create Sonarr and Radarr links next to the title on AnimeTosho series pages
 // @author       emukus
 // @match        https://animetosho.org/series/*
 // @icon         https://www.google.com/s2/favicons?domain=animetosho.org&sz=64
@@ -36,24 +36,25 @@
     return null;
   }
 
-  // Function to create the Sonarr or Radarr link
-  function createLink(id, service) {
+  // Function to create the Sonarr or Radarr links
+  function createLinks(tvdbId, imdbId) {
     const titleElement = document.querySelector('h2#title');
-    if (titleElement && id) {
-      const link = document.createElement('a');
-      let url;
 
-      if (service === 'sonarr') {
-        url = `http://localhost:8989/add/new?term=tvdb:${id}`;
-      } else if (service === 'radarr') {
-        url = `http://localhost:7878/add/new?term=imdb:${id}`;
+    if (titleElement) {
+      if (tvdbId) {
+        const sonarrLink = document.createElement('a');
+        sonarrLink.href = `http://localhost:8989/add/new?term=tvdb:${tvdbId}`;
+        sonarrLink.target = '_blank'; // Open in a new tab
+        sonarrLink.innerHTML = '<img src="https://www.google.com/s2/favicons?domain=sonarr.tv" alt="Add to Sonarr" title="Add to Sonarr" style="margin-left: 10px; cursor: pointer;">';
+        titleElement.appendChild(sonarrLink);
       }
 
-      if (url) {
-        link.href = url;
-        link.target = '_blank'; // Open in a new tab
-        link.innerHTML = `<img src="https://www.google.com/s2/favicons?domain=${service === 'sonarr' ? 'sonarr.tv' : 'radarr.video'}" alt="Add to ${service}" title="Add to ${service}" style="margin-left: 10px; cursor: pointer;">`;
-        titleElement.appendChild(link);
+      if (imdbId) {
+        const radarrLink = document.createElement('a');
+        radarrLink.href = `http://localhost:7878/add/new?term=imdb:${imdbId}`;
+        radarrLink.target = '_blank'; // Open in a new tab
+        radarrLink.innerHTML = '<img src="https://www.google.com/s2/favicons?domain=radarr.video" alt="Add to Radarr" title="Add to Radarr" style="margin-left: 10px; cursor: pointer;">';
+        titleElement.appendChild(radarrLink);
       }
     }
   }
@@ -62,9 +63,5 @@
   const tvdbId = extractTVDBId();
   const imdbId = extractIMDbId();
 
-  if (tvdbId) {
-    createLink(tvdbId, 'sonarr');
-  } else if (imdbId) {
-    createLink(imdbId, 'radarr');
-  }
+  createLinks(tvdbId, imdbId);
 })();
