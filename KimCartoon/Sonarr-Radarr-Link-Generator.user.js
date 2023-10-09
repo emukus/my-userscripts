@@ -5,6 +5,7 @@
 // @description  Extracts and modifies the title on KimCartoon and generates Sonarr or Radarr links with icons.
 // @author       emukus
 // @match        https://kimcartoon.li/Cartoon/*
+// @icon         https://www.google.com/s2/favicons?domain=kimcartoon.li&sz=64
 // @grant        none
 // ==/UserScript==
 
