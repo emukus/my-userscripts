@@ -2,7 +2,7 @@
 // @name        Letterboxd Search Bars
 // @namespace   https://github.com/emukus
 // @description Adds a search bar to various sites on Letterboxd
-// @author      emukus
+// @author      Lelobster, edited by emukus
 // @icon        https://letterboxd.com/favicon.ico
 // @match       *://letterboxd.com/film/*
 // @version     1.4
