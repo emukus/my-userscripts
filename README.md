@@ -27,3 +27,4 @@ Make sure you have the latest version of any of the following userscript manager
 * Install [Auto Click .torrent Links and Close Window](https://github.com/emukus/my-userscripts/raw/main/Auto-Click-torrent-Links-and-Close-Window.user.js)
 * Install [Letterboxd Search Bars](https://github.com/emukus/my-userscripts/raw/main/Letterboxd/Search-Bars.user.js)
 * Install [AnimeTosho Sonarr/Radarr Link Generator](https://github.com/emukus/my-userscripts/raw/main/AnimeTosho/Sonarr-Radarr-Link-Generator.user.js)
+* Install [IMDB Score Hider with Hover](https://github.com/emukus/my-userscripts/raw/main/IMDB-Score-Hider-with-Hover.user.js)
