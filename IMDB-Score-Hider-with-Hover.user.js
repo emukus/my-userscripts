@@ -5,7 +5,7 @@
 // @contributor   Assil Ksiksi
 // @version       0.6
 // @match         https://www.imdb.com/*
-// @description   Hides all TV and movie scores from IMDb. Restores on hover.
+// @description   Hides all TV and movie scores from IMDb. Restore score by hovering on movie title.
 // @icon          https://www.google.com/s2/favicons?sz=64&domain=imdb.com
 // ==/UserScript==
 
