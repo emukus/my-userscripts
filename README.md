@@ -30,4 +30,4 @@ Make sure you have the latest version of any of the following userscript manager
 * Install [KimCartoon - Sonarr/Radarr Link Generator](https://github.com/emukus/my-userscripts/raw/main/KimCartoon/Sonarr-Radarr-Link-Generator.user.js)
 * Install [IMDB - Score Hider with Hover](https://github.com/emukus/my-userscripts/raw/main/IMDB-Score-Hider-with-Hover.user.js)
 * Install [YouTube - Custom colors and Poketube video progress bar](https://github.com/emukus/my-userscripts/raw/main/YouTube-Custom-colors-and-Poketube-video-progress-bar.user.js)
-* Install [Letterboxd - Watched to Fan Ratio](https://github.com/emukus/my-userscripts/raw/main/Letterboxd/Film-Duration-Converter.user.js)
+* Install [Letterboxd - Watched to Fan Ratio](https://github.com/emukus/my-userscripts/raw/main/Letterboxd/Watched-to-Fan-Ratio.user.js)
