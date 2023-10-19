@@ -2,10 +2,11 @@
 // @name        Letterboxd Search Bars
 // @namespace   https://github.com/emukus
 // @description Adds a search bar to various sites on Letterboxd
-// @author      Lelobster, edited by emukus
+// @author      emukus
+// @contributor LeLobster
 // @icon        https://letterboxd.com/favicon.ico
 // @match       *://letterboxd.com/film/*
-// @version     1.4
+// @version     1.8
 // @grant       none
 // ==/UserScript==
 
@@ -30,19 +31,50 @@ function main() {
 
     console.log(filmTitle, '(' + filmYear + ')')
 
-    // Look for the IMDb ID in the button
-    var imdbElement =  document.querySelector('[data-track-action="IMDb"]')
-    if (imdbElement != 'undefined' && imdbElement != null) {
-        // Get imdb id from the button
-        buttons = document.getElementsByClassName('micro-button track-event');
-        imdbBtn = buttons[0].href.match(/tt(\d{7})/);
-        var imdbId = imdbBtn[1]
-        console.log('IMDb ID:', imdbId)
+    // Look for the IMDb and TMDb IDs in the buttons
+    var imdbElement = document.querySelector('[data-track-action="IMDb"]');
+    var tmdbElement = document.querySelector('[data-track-action="TMDb"]');
+
+    if (imdbElement) {
+        // Get IMDb id from the IMDb button
+        var imdbButtons = document.querySelectorAll('.micro-button.track-event');
+
+        if (imdbButtons.length > 0) {
+            var imdbBtn = imdbButtons[0].href.match(/tt(\d{7})/);
+
+            if (imdbBtn) {
+                var imdbId = imdbBtn[1];
+                console.log('IMDb ID:', imdbId);
+            } else {
+                console.log('IMDb ID not found');
+            }
+        } else {
+            console.log('No IMDb button found');
+        }
     } else {
-        // In the rare case where a film doesn't have a imdb page
-        // use just the title instead
-        var imdbId = filmTitle
-        console.log('Film has no IMDb page, using filmTitle')
+        // Handle the case when IMDb button doesn't exist
+        console.log('Film has no IMDb page');
+    }
+
+    if (tmdbElement) {
+        // Get TMDb id from the TMDb button
+        var tmdbButtons = document.querySelectorAll('.micro-button.track-event');
+
+        if (tmdbButtons.length > 1) { // Assuming TMDb button is not the first one
+            var tmdbBtn = tmdbButtons[1].href.match(/movie\/(\d+)/);
+
+            if (tmdbBtn) {
+                var tmdbId = tmdbBtn[1];
+                console.log('TMDb ID:', tmdbId);
+            } else {
+                console.log('TMDb ID not found');
+            }
+        } else {
+            console.log('No TMDb button found');
+        }
+    } else {
+        // Handle the case when TMDb button doesn't exist
+        console.log('Film has no TMDb page');
     }
 
     // Function used to build icons
@@ -108,7 +140,28 @@ function main() {
 
     createIcon(tr, 'The Pirate Bay','https://thepiratebay.org/search/'+filmTitle+' '+filmYear+'/0/5/200', img);
 
-    // The RARBG
+    // Torrent Galaxy
+    img = 'data:text/html;charset=utf-8;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADY0lEQVQ4jV2SS28bVRiGv++cMxeP'+
+    'PY4ndeIkTtokrkqDymURlUIFOwrqAqiALrqEVZfs+QesQWzYsUYQCbFAKiyQoFAupVLihubmNHZi'+
+    'xzNjz4znes7HpkjAI73L5109CADQO3kaTI2DP0nZ2PS4eLQkCLV8bs2VHAT09k2ksW4U5w6lJXRp'+
+    'Q0XFWUGLTR3wcXcNpmsa7HcnIgzIrh4uP0sSVbzcbRu1TENAluaU6O2lppBaM6of/8Hm/eGMWc3C'+
+    'OCe+sqqDcwa578u602ndooxfGTpH7RmDXZkOrfcrkXldz/nswHD7bGSvW6FzLZLZTiTCYLVZlvyT'+
+    'jxfxyA+rTnflhp6Ub3dFb6PuyNZcYX2oS/GyUOySIcVVDVn+Vzb4qZbWb5QS+ymPeb+FaR6yg9NA'+
+    '46dOq5RUb2dUjDzhjqbJfI0TW4AnMMKyrbTXdUNVAxVtaYX5dtltXO2NwxI79mOzHDkvciWeySgf'+
+    '5FJJUFCF/4GEFZSoxZAOkLBWSiuvxj6vschDSxTGRQTUGCILJjJwk3yTACT+62CcF49ORmlfIOMI'+
+    'yLkS51WoOyIMSCiTDEAAHbU5nbTs585ogxag0bCMFxBRG6X59v2T8ed+UvTLldIiEAARiCQmTfij'+
+    'ooi13HUEgA7a6lJpunnnoHN39zD96NyMsSYY6l0v2/HCfPul52sNi8znkAByJT0vShPhuSo5tYPt'+
+    'BnfGHPjMLNSvr6+f/n7n2+jBl/cnbUWEdUdk197SS8tq/hUt0dcIgEbFZOvYi8ciGLBkZ2q4uWI2'+
+    '2lVuXbaK8hvn89bB0s3+BjEVAAAhgsGHzuWK77yHgGZGRa8TDn9xByoQnT2V6ZbfuWC7X1+0zUsc'+
+    '2JQVOR+YHftNRAoBgAjAQMnPMsVnAIAG6fi7P3v9B+4xi/nuTkbLZw0ZsWjcqFSmba10gQMrMcUb'+
+    'TImlJ1tgxMoEoNw0/PGHo91Pt/aCzXt3kwl/590peNjOZK7kZJCPO4bORpwhK0AmmSr8VBVeqgo3'+
+    'yNODg8D95vu93c/uPRz++nifvC++WlbIOYKUBK2Wweea3J5yYHbujDlfK+tTnKMAAFAKVJjkQW8Y'+
+    'n3hDdTzs02hzM8mrVQb4n9oQWK3GRaXCDM0AjXFABACpgIoMikmkMs9TmZSk/nH+BpAozyIWWqCY'+
+    'AAAAAElFTkSuQmCC';
+
+    createIcon(tr, 'TGx','https://torrentgalaxy.to/torrents.php?search=tt'+imdbId, img);
+
+// The RARBG
     img = 'data:text/html;charset=utf-8;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAflJREFU'+
     'OI2F0z9oXEcQx/HPCSWY22DcvFe4CK9KoYOQIhZxE1/j5lQLUpig2lIVIhchsY1xZadIYR8uXKhX'+
     'fZUhnFOeXAVOhBDCI+XbJjHsEozRpjid/OdsMrDMsMN+5/eDnV4ppYePcQ0f4cRq/IWf8cdKp5Ry'+
@@ -121,7 +174,7 @@ function main() {
     'v+Iz/IhvZvM5iYwqBINB8zu+752u86e47tU6n2CMmcU+3cAneHlq+wUe4dl/EuoEoSZWymEAAAAA'+
     'SUVORK5CYII=';
 
-    createIcon(tr, 'RARBG','https://therarbg.com/get-posts/keywords:'+filmTitle+' '+filmYear+'/', img);
+    createIcon(tr, 'The RARBG','https://therarbg.com/get-posts/keywords:'+filmTitle+' '+filmYear+'/', img);
 
     // RMTeam
     img = 'data:text/html;charset=utf-8;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACV0lEQVQ4jaWTzWsTURTFz5tMZoJt'+
@@ -146,7 +199,7 @@ function main() {
     'eUCB0leTD8wDK+oCv8Ga+NwdJLOzYB8CVxLsoagr1jQpxpz0tEdekJPTWENskhFwSUe2LVSR789/5A'+
     'T3NgNHQwce9AAAAABJRU5ErkJggg==';
 
-    createIcon(tr, 'Pahe','http://www.pahe.li/?s='+filmTitle.replace(/\s/g, "+"), img);
+    createIcon(tr, 'Pahe','http://www.pahe.li/?s=tt'+imdbId, img);
 
     //1337x
     img = 'data:text/html;charset=utf-8;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB8UlEQVQ4jcWTsWsUYRDF38z37Wbv'+
@@ -162,17 +215,24 @@ function main() {
 
     createIcon(tr, '1337x','https://1337x.to/search/'+filmTitle+' '+filmYear+'/1/', img);
 
-    // YTS
-    img = 'data:text/html;charset=utf-8;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAjVBMVEUeHyEeIB8fHyEfHx8eHiAe'+
-    'HyMdHiAeHh4cICEdHx4fHx0eIB0cIB8gHh8fHSAbIBwXURcAvwAbNB4bKx4ZRhsYVRkWahUcJh4N'+
-    'igwdKiAJlwcUZRYTcBUQgBARdxMOlA0AqAEYORwAtQQUWxkHoAoUYBYFsQcAxQAdMx4C1wMbQRwA'+
-    'zAAPhA8JqwoDwgNhHtUJAAAA00lEQVQYlRWP2XaDMBBDNTMe2ywxOCshJCEGElpK///zSl/vkc6V'+
-    'QKz7AzgnUhAVBNH6KACXVncw7IDTmeGt512eAVZxaa4QatobuvbuiHB7lJkPz759pTggAONkBHqK'+
-    '6Z0eRQDjXXtDckkx9qWxGW1g8+Wu/cS9YflPTFIqU7O0xTZpQ2tTCWnWL5MP5NmiS3MQwtYQYhcO'+
-    'uKSWq/L1NZJR6HWAnWKDcP2evXI2NzN2+ojjka2Twk1jrdsrTGnp7133s651rhATquq8/n7iOMBA'+
-    '/gDR8Q8MVeL5jwAAAABJRU5ErkJggg==';
+    // Anime Tosho
+    img = 'data:text/html;charset=utf-8;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAC8klEQVQ4jXWTTUhjdxTFz/vre+Zh'+
+    'THHwqVhMxKALvxhFWogUiToGJ60Eq4uK3YQBGVzobroRcTGzciFuXFhB1E1cuJAiLhwNorSD5kFb'+
+    'Sy1R34iKGKIZE3BMxrzTxXwwTmYuHO7mnns58LvAF+rs7MxK8juSfpKPSfpIOtra2qSP56RPjcvL'+
+    'y+UlJSX94XC4e21t7V4oFLImEglRVlZ24/V6X3k8ni2Hw/FUUZQ/M67e3t7e39nZ+aOlpYWKohDA'+
+    'HQkh2NjYyNXV1X/T6XTjHTNJ297e3vPa2toM46eqrKykYRhrdyJcX1//0tfX92xxcVFSFAVdXV30'+
+    '+/2Mx+Pi/PwcmqYhEomY4+PjYn9/H0NDQ69dLtcDAMDGxsa9paWlsNVqZU5ODkdHR83t7W3T7Xab'+
+    'eXl5FEKwoKCAwWDwcHNz829N0+h0Ok1d14cAAJeXlz91d3cnAbC9vf3WMIzXbrf7Q+73fWVlZT0W'+
+    'iz1yuVzMz88nyScCACKRSMPW1pYiyzL6+/tTwWAwub6+DkmSMDg4CFVVoWkaCgsLj1OpVIIkZFkm'+
+    'gDcCgKTretPV1RXKy8tRVVW1PTc395UQAiMjIxgYGPgrKysLmqahuLhYj0aj/oODAzidzjcAXgoA'+
+    'TCQSXyeTSRQVFSE3N/efi4sLyLKMpqamsK7rualUCiQRj8d/mJycbI5Go2htbU0BeMvC2NjYCQA2'+
+    'NDTw+Pj4t46ODkqSxJqaGtrtdgKgxWJhfX09LRYLS0tLzd3d3U2SAgAwPT39nyzLVFWVgUDADAQC'+
+    '5ruMGbJarZyZmXlFsvkDRCcnJ79WVFQQAFVVZWdnJz0eD1VVZW9vLw8PD/WJiYmr4eHhRCgU+n12'+
+    'dvbhO4becpROp7+dn58/t9lsGRfr6upoGMbPJB0ky0jmZ/wAAITD4YGpqalIdXW1abPZmJ2dTUmS'+
+    '6PP5eHp6+v1nTR+j3NPTIy0sLHwTi8V8uq43Hx0dVd3c3Mher/eF3W7/UQgR+9yC/wE9HIFDtxRs'+
+    'jgAAAABJRU5ErkJggg==';
 
-    createIcon(tr, 'YTS','https://yts.ag/browse-movies/'+filmTitle+'/all/all/0/latest/0/all', img);
+    createIcon(tr, 'Anime Tosho','https://animetosho.org/search?q='+filmTitle, img);
 
     // Nyaa
     img = 'data:text/html;charset=utf-8;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAMFBMVEUJN280qPs83f4Sb+UVkPt6'+
@@ -315,15 +375,19 @@ function main() {
     'cuQgAAAABJRU5ErkJggg==';
     createIcon(tr, 'ShortOfTheWeek', 'https://www.shortoftheweek.com/search/?q='+filmTitle, img);
 
-    // BluRay
-    img = 'data:text/html;charset=utf-8;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAA6'+
-    'klEQVQ4je3Rr0oEYRQF8N+3TFhElg0iImL2CVazIANuEdRqmSfQN5B9ArFomCI2g8kwoGDSYjKJGG'+
-    'UwLSiLTHIM+4VdWBbNessNl/PnnsP/hGnHNK9bWMICWnjFU5GFwRhBmtc97KBCt8hCOYFsHlvYRx+'+
-    'nOA9pXndwjwbOcIkEn3jD86himtdNXGEdJw0cRXAfJZaxiFVc4D3N65sIVGShwnHk20vQwzZWsIkB'+
-    'vtCMDm6jYjXy0UbcD1NDnJDDLA5xgDvsJj8AtdFBF2t4jA6uiyyM1xgV5jBjWFvbMNASL0UWPn7j+'+
-    'K/MN5CHQLPEzoOzAAAAAElFTkSuQmCC';
+    // Fanart.tv
+    img = 'data:text/html;charset=utf-8;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB2klEQVQ4jZ2SsWtTURjFf/e+l5Am'+
+    'IY1Vk5dXnKSo1UHEwWJ3FwNZXYWgiHRycc2/8BYJaIaSoYgERJL4poIgouiSUFqjrWKNmpJYSQ3l'+
+    'NbnXobVi2tchZzx8/L7znXthSI7j6Ha7XRr2XdctVSoVPezLYcPzvGo2m83U6/XCX69YLBYcx8lE'+
+    'o9Hq8Px/yufzAORyuUImk9Hdbrfkum4pnU7rcrlcAKjVakcy9jU/P19NpVLasizdaDR8NwutNfdf'+
+    'rCXdTx1lSAGAYWhe3bi88W2z27LGowghEjPFtyf7ew0oDTcvWPLORfuHuLf44daz1c6D5d7WQXxE'+
+    'gadgx4QdEMpABAXa08xOxpi7ZN8WZx690Svxz/raYErY0eChMQ0pWGr3eBlcBqV2zX5fZ4/PCHOl'+
+    '8xu5mRBP7p4nbB54lH1t9xXhp+sg95Kapnj/s4cJYAoISIEQwhcQ8oH7r/STGWLs6ykwzREB63F6'+
+    'c7PQTKCMUQB2C/HwOVjfkYNRAIS4GkmCDAMgCcBAawLSv0DgX8HNGI+vn4NmjIHUmKcjY3ycWFNX'+
+    'Ft7JieDh/0ACq7+2Id4Dawt7YRFOtNTZcVua0YCc5ou19HqyCf0jLoopULuxiXskN6Ykx5j+AwtL'+
+    'qJfE2nQCAAAAAElFTkSuQmCC';
 
-    createIcon(tr, 'BluRay', 'http://www.blu-ray.com/search/?quicksearch=1&quicksearch_country=US&quicksearch_keyword='+filmTitle+'&section=theatrical', img);
+    createIcon(tr, 'Fanart','https://fanart.tv/movie/'+tmdbId, img);
 
     applyCSS();
 
