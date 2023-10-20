@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name         Letterboxd Watched to Fan Ratio
-// @namespace    https://github.com/emukus
+// @namespace    emukus
+// @homepage     http://github.com/emukus
 // @version      0.3
 // @description  Display the ratio of watchers to fans.
 // @author       emukus

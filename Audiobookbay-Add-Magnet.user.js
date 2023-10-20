@@ -1,7 +1,8 @@
 // ==UserScript==
 // @name        Audiobookbay - Add Magnet Link
 // @description Add an easy-to-use magnet link to the top of the page
-// @namespace   https://github.com/emukus
+// @namespace   emukus
+// @homepage    http://github.com/emukus
 // @match       https://audiobookbay.li/*
 // @match       https://audiobookbay.is/*
 // @match       https://theaudiobookbay.se/*

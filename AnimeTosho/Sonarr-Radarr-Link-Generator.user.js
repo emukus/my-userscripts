@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name         AnimeTosho Sonarr/Radarr Link Generator
-// @namespace    https://github.com/emukus
+// @namespace    emukus
+// @homepage     https://github.com/emukus
 // @version      1.2
 // @description  Create Sonarr and Radarr links next to the title on AnimeTosho series pages
 // @author       emukus

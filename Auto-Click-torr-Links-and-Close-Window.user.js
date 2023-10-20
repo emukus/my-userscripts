@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name         Auto Click .torrent Links and Close Window
-// @namespace    http://github.com/emukus
+// @namespace    emukus
+// @homepage     http://github.com/emukus
 // @version      1.2
 // @description  Automatically click on links ending with .torrent and close the window if a torrent link is found after four cycles
 // @match        https://get-to.link/*

@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name          IMDB Score Hider with Hover
-// @namespace     http://github.com/emukus
+// @namespace     emukus
+// @homepage      http://github.com/emukus
 // @author        emukus
 // @contributor   Assil Ksiksi
 // @version       0.6

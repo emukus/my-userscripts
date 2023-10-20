@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name         KimCartoon Sonarr/Radarr Link Generator
-// @namespace    http://github.com/emukus
+// @namespace    emukus
+// @homepage     http://github.com/emukus
 // @version      1.2
 // @description  Extracts and modifies the title on KimCartoon and generates Sonarr or Radarr links with icons.
 // @author       emukus
