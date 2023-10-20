@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tab Audio Mute Shortcut
 // @namespace    emukus
-// @homepage     http://github.com/emukus
+// @homepage     https://github.com/emukus
 // @version      1.0
 // @description  Mute audio in the current tab with Alt+Shift+M
 // @author       emukus

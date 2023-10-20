@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Greasy Fork Script Sorter
 // @namespace    emukus
-// @homepage     http://github.com/emukus
+// @homepage     https://github.com/emukus
 // @version      1.2
 // @description  Always sort Greasy Fork scripts by 'Updated date'
 // @author       emukus

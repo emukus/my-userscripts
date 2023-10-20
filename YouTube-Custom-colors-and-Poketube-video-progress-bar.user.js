@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          YouTube - Custom colors and Poketube video progress bar
 // @namespace     emukus
-// @homepage      http://github.com/emukus
+// @homepage      https://github.com/emukus
 // @description	  Brighten up your YouTube experience with this custom video progress bar. The subtle yet vibrant glow brings some life and color to the YouTube HTML5 video player.
 // @author        emukus
 // @contributors  zoid, YAD

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Letterboxd Search Bars
 // @namespace   emukus
-// @homepage    http://github.com/emukus
+// @homepage    https://github.com/emukus
 // @description Adds a search bar to various sites on Letterboxd
 // @author      emukus
 // @contributor LeLobster

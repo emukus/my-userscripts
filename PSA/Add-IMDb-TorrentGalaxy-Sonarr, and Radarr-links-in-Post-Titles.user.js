@@ -3,7 +3,7 @@
 // @description         Enhance post titles by adding links to IMDb, TorrentGalaxy, Sonarr, and Radarr
 // @version             1.6
 // @namespace           emukus
-// @homepage            http://github.com/emukus
+// @homepage            https://github.com/emukus
 // @match               https://psarips.*/movie/*
 // @match               https://psarips.*/tv-show/*
 // @match               https://psa.wf/movie/*
