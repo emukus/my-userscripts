@@ -407,6 +407,15 @@ function main() {
 
     createIcon(tr, 'Fanart','https://fanart.tv/movie/'+tmdbId, img);
 
+    // MyAnimeList
+    img = 'data:text/html;charset=utf-8;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAPFBMVEUuUaLy9foBPJpVb7D///8iS6AV'+
+    'Q5wtT58uUaIuUaJkfLhDYqtyhrzL0uaDk8KQn8myvNnc4O06XammstSEcSWfAAAACXRSTlPX/////'+
+    '///F9aTcVasAAAAcUlEQVQYlXWPCQ6EMAhFKQWUWtqp3v+uA8mYcf0EQl5YYQI9aJ5g1pMA9KIHIK'+
+    'ws6i6RKqyjYR8q1Ua2zgoLUSHijcxK+kiA5Ma0rZR/oKYWRfQHGKBkB1ZzAGl7i88DRV+L3BcPgsj'+
+    '7Yfx+6e256/tfYXEIGLx2LncAAAAASUVORK5CYII=';
+
+    createIcon(tr, 'MyAnimeList','https://myanimelist.net/anime.php?q='+filmTitle, img);
+
     applyCSS();
 
 }
