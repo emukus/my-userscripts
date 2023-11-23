@@ -10,7 +10,7 @@ I really enjoy coming up with and tinkering with pre-existing userscripts I find
 These scripts are tested primarily on Tampermonkey for Chrome and Chromium browsers. As a result, there may be some performance and compatibility issues on Firefox alternatives such as Greasemonkey.
  
 # Requirements
-Make sure you have the latest version of any of the following userscript managers installed on your browser:
+Make sure you have the latest version of one of the following userscript managers installed on your browser:
 - [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo/)  (Recommended)
 - [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/) (Firefox)
 - [AdGuard Userscripts](https://kb.adguard.com/en/general/userscripts) ([Windows](https://kb.adguard.com/en/windows/features/extensions) and [macOS](https://kb.adguard.com/en/macos/features/extensions))
