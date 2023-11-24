@@ -25,6 +25,8 @@ Make sure you have the latest version of one of the following userscript manager
 * Install [Audiobookbay - Add Magnet Link](https://github.com/emukus/my-userscripts/raw/main/Audiobookbay-Add-Magnet.user.js)
 * Install [Mute All Audio in Tab](https://github.com/emukus/my-userscripts/raw/main/Mute-All-Audio-in-Tab-Shortcut.user.js)
 * Install [Auto Click .torr Links and Close Window](https://github.com/emukus/my-userscripts/raw/main/Auto-Click-torr-Links-and-Close-Window.user.js)
+* Install [	
+MyAnimeList External Link Adder](https://github.com/emukus/my-userscripts/raw/main/MyAnimeList-External-Link-Adder.user.js)
 * Install [Letterboxd - Search Bars](https://github.com/emukus/my-userscripts/raw/main/Letterboxd/Search-Bars.user.js)
 * Install [AnimeTosho - Sonarr/Radarr Link Generator](https://github.com/emukus/my-userscripts/raw/main/AnimeTosho/Sonarr-Radarr-Link-Generator.user.js)
 * Install [KimCartoon - Sonarr/Radarr Link Generator](https://github.com/emukus/my-userscripts/raw/main/KimCartoon/Sonarr-Radarr-Link-Generator.user.js)
