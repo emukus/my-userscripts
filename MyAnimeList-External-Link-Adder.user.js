@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name           MyAnimeList External Link Adder
 // @author         Magnum357i - edited by emukus
-// @namespace      https://github.com/emukus/my-userscripts
+// @namespace      emukus
+// @homepage       https://github.com/emukus/my-userscripts
 // @description    Adds external links in the end of the title
 // @version        1.3
 // @icon           https://cdn.myanimelist.net/images/favicon.ico
-
 // @match          https://myanimelist.net/anime/*
 
 // @run-at         document-end
