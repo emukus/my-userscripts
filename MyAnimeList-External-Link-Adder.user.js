@@ -7,7 +7,6 @@
 // @version        1.3
 // @icon           https://cdn.myanimelist.net/images/favicon.ico
 // @match          https://myanimelist.net/anime/*
-
 // @run-at         document-end
 
 // ==/UserScript==
