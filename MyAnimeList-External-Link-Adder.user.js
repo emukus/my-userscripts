@@ -2,7 +2,7 @@
 // @name           MyAnimeList External Link Adder
 // @author         Magnum357i - edited by emukus
 // @namespace      emukus
-// @homepage       https://github.com/emukus/my-userscripts
+// @homepage       https://github.com/emukus/
 // @description    Adds external links in the end of the title
 // @version        1.3
 // @icon           https://cdn.myanimelist.net/images/favicon.ico
