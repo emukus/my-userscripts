@@ -3,7 +3,7 @@
 // @author         Magnum357i - edited by emukus
 // @namespace      emukus
 // @homepage       https://github.com/emukus/
-// @description    Adds external links in the end of the title
+// @description    Adds external links at the end of the title
 // @version        1.3
 // @icon           https://cdn.myanimelist.net/images/favicon.ico
 // @match          https://myanimelist.net/anime/*
