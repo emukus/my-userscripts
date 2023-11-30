@@ -290,7 +290,7 @@ function main() {
     'NCpUeWZHU6Vs9gASWEYsEiC5MxWq/sI20EB7qWbVp6m5TVjHSCcm9v4Bd2JDGtUJfzMAAAAAElF'+
     'TkSuQmCC';
 
-    createIcon(tr, 'PSARips', 'https://psa.re/?s='+filmTitle, img);
+    createIcon(tr, 'PSARips', 'https://psarips.com/?s='+filmTitle, img);
 
     // Fora - Snahp
     img = 'data:text/html;charset=utf-8;base64,AAABAAMAEBAAAAEAIABoBAAANgAAABAQAAABACAAaAQAAJ4EAAAQEAAAAQAgAGgEAAAGCQAAKAAAABAAAAAgAAAAAQAgAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAADMzMwAzMzMAMzMzADMzMwIzMzM2MzMzjj'+
