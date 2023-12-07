@@ -7,7 +7,7 @@
 // @contributor LeLobster
 // @icon        https://letterboxd.com/favicon.ico
 // @match       *://letterboxd.com/film/*
-// @version     1.8
+// @version     1.8.1
 // @grant       none
 // ==/UserScript==
 
@@ -200,7 +200,7 @@ function main() {
     'eUCB0leTD8wDK+oCv8Ga+NwdJLOzYB8CVxLsoagr1jQpxpz0tEdekJPTWENskhFwSUe2LVSR789/5A'+
     'T3NgNHQwce9AAAAABJRU5ErkJggg==';
 
-    createIcon(tr, 'Pahe','http://www.pahe.li/?s=tt'+imdbId, img);
+    createIcon(tr, 'Pahe','http://www.pahe.me/?s=tt'+imdbId, img);
 
     //1337x
     img = 'data:text/html;charset=utf-8;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB8UlEQVQ4jcWTsWsUYRDF38z37Wbv'+
