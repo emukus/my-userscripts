@@ -7,7 +7,7 @@
 // @contributor LeLobster
 // @icon        https://letterboxd.com/favicon.ico
 // @match       *://letterboxd.com/film/*
-// @version     1.8.1
+// @version     1.8.2
 // @grant       none
 // ==/UserScript==
 
@@ -394,16 +394,24 @@ function main() {
     createIcon(tr, 'ShortOfTheWeek', 'https://www.shortoftheweek.com/search/?q='+filmTitle, img);
 
     // Fanart.tv
-    img = 'data:text/html;charset=utf-8;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB2klEQVQ4jZ2SsWtTURjFf/e+l5Am'+
-    'IY1Vk5dXnKSo1UHEwWJ3FwNZXYWgiHRycc2/8BYJaIaSoYgERJL4poIgouiSUFqjrWKNmpJYSQ3l'+
-    'NbnXobVi2tchZzx8/L7znXthSI7j6Ha7XRr2XdctVSoVPezLYcPzvGo2m83U6/XCX69YLBYcx8lE'+
-    'o9Hq8Px/yufzAORyuUImk9Hdbrfkum4pnU7rcrlcAKjVakcy9jU/P19NpVLasizdaDR8NwutNfdf'+
-    'rCXdTx1lSAGAYWhe3bi88W2z27LGowghEjPFtyf7ew0oDTcvWPLORfuHuLf44daz1c6D5d7WQXxE'+
-    'gadgx4QdEMpABAXa08xOxpi7ZN8WZx690Svxz/raYErY0eChMQ0pWGr3eBlcBqV2zX5fZ4/PCHOl'+
-    '8xu5mRBP7p4nbB54lH1t9xXhp+sg95Kapnj/s4cJYAoISIEQwhcQ8oH7r/STGWLs6ykwzREB63F6'+
-    'c7PQTKCMUQB2C/HwOVjfkYNRAIS4GkmCDAMgCcBAawLSv0DgX8HNGI+vn4NmjIHUmKcjY3ycWFNX'+
-    'Ft7JieDh/0ACq7+2Id4Dawt7YRFOtNTZcVua0YCc5ou19HqyCf0jLoopULuxiXskN6Ykx5j+AwtL'+
-    'qJfE2nQCAAAAAElFTkSuQmCC';
+    img = 'data:text/html;charset=utf-8;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAAAAAAAAAAAAPjHGAD'+
+    '/0hgK3rIZVL2YG7CmhRvqm3wc/pt8HP6mhRvqvZgbsOC0GVP/0hgK+McYAAAAAAAAAAAA1KoaAOq8GQDvwBkew5'+
+    'wanJZ4HPKWeBz/rosb/7yXG/+8lxv/rYsb/5V3HP+WeBzywpsanO2+GR7nuhkA1KoaAOS3GQDuvxketpIbuo9zH'+
+    'P+/mRr/4rUZ/+e5Gf/muRn/5rkZ/+i6Gf/ktxn/wJoa/45yHP+3kxu58MEZHua5GQD/1hgKw5wanJBzHP/Pphr/'+
+    '5rkZ/+S3Gf/ktxn/5bcZ/+a5Gf/RqBr/m3wc/8igGv/Pphr/jnIc/8OcGpz/1hgK4LMZVJl6HPHBmxr/5rkZ/+S'+
+    '3Gf/ktxn/5rkZ/96yGf+nhRv/X0wg/0I1JP+BZx3/57oZ/76ZGv+WeBzx3rIZVL6YG6+Gax//2a4a/+W4Gf/luB'+
+    'n/5LcZ/7+ZGv9xWh7/VEQm/31oMf9cTCn/oYEb/+e5Gf/itRn/lXcc/72YG6+lhBzpe2Yt/6aIKP/Vqxv/0qka/'+
+    '4puHP9RQSL/a1kt/5R8Nf+QeTT/VkYj/8ihGv/muBn/57kZ/66LG/+mhRvplnke/oVvMv+VfTX/eGIn/1FAHv9N'+
+    'Pyf/iXIz/5uCNv+cgzb/eGQw/2tVH//fsxn/5bgZ/+W3Gf+sihz/l3kc/pd6Hv5uWy3/VUYo/1pIIP+HbBz/XEo'+
+    'j/3llMP+agTb/m4I2/15OKv+Udhz/6LoZ/9asGv+wjyT/gGos/5V4Hv5pUx7pRzkg/4tvHP/TqRr/57kZ/8CaGv'+
+    '9oUyD/algs/4x1NP9SQyT/uZUa/8CbH/+bgC3/mH82/31oL/+lhBzpdl4dr72XGv/ktxn/5bgZ/+S3Gf/muRn/0'+
+    '6kZ/31kHv9OPyX/UEAi/5yAKP+WfTP/mYA2/5h/Nv94Yij/v5kar+e5GVPmuBnx5LcZ/+S3Gf/ktxn/5LcZ/+W4'+
+    'Gf/eshn/alQd/1xMKv+YgDb/moE2/5uCNv+EbjL/jnIf8eK1GFPktxkK5LcZnOS3Gf/ktxn/5LcZ/+S3Gf/luBn'+
+    '/2q8Z/11KH/96ZTD/nIM2/5uCNv+NdTT/emMl/8SdGpz/1hgK4bUZAOK1GR7jtxm55LcZ/+S3Gf/ktxn/5rkZ/7'+
+    'uWGv9NPiT/kXk0/5mANv+FbzL/e2Ml/7eTG7nxwhge57kZAOS3GQDktxkA5LcZHuS3GZzktxny5LcZ/+a5Gf+Nc'+
+    'Rz/TD4m/31oL/95Yyj/j3Mf8sSdGpzxwhge4rYZAP/NGAAAAAAAAAAAAOS3GQDktxkK5LcZVOW3GbDeshnqZVEe'+
+    '/nVeHv6nhhzqv5kasOG1GFP/0hgK+McYAAAAAAAAAAAA4AcAAMADAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'+
+    'AAAAAAAAAAAAAAAAAAAAAAAAAAIABAADAAwAA4AcAAA==';
 
     createIcon(tr, 'Fanart','https://fanart.tv/movie/'+tmdbId, img);
 
