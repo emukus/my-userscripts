@@ -7,7 +7,7 @@
 // @contributor LeLobster
 // @icon        https://letterboxd.com/favicon.ico
 // @match       *://letterboxd.com/film/*
-// @version     1.8.2
+// @version     1.9
 // @grant       none
 // ==/UserScript==
 
@@ -391,6 +391,7 @@ function main() {
     'ocLt4B61ykZUJzB5xE1PJnXgAX2nPA6HbJsHeD5Coxq9ch3UMm9KKO7buaWAxDnOuzEnnZjDtYhir'+
     '4ELl9DcOj4QX6anICnAqtIaJNz039mLysylomzhJPK4RG/Qg8K0m0lNP/6S2YaUgfl7wAecjaeRM9'+
     'cuQgAAAABJRU5ErkJggg==';
+
     createIcon(tr, 'ShortOfTheWeek', 'https://www.shortoftheweek.com/search/?q='+filmTitle, img);
 
     // Fanart.tv
@@ -413,7 +414,14 @@ function main() {
     '/nVeHv6nhhzqv5kasOG1GFP/0hgK+McYAAAAAAAAAAAA4AcAAMADAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'+
     'AAAAAAAAAAAAAAAAAAAAAAAAAAIABAADAAwAA4AcAAA==';
 
-    createIcon(tr, 'Fanart','https://fanart.tv/movie/'+tmdbId, img);
+    // If TMDb ID is not available, search using the film title on Fanart.tv
+    if (tmdbId) {
+        createIcon(tr, 'Fanart','https://fanart.tv/movie/'+tmdbId, img);
+    }
+    else {
+        createIcon(tr, 'Fanart.tv ', 'https://fanart.tv/?s='+filmTitle+'&sect=1', img);
+    }
+
 
     // MyAnimeList
     img = 'data:text/html;charset=utf-8;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAPFBMVEUuUaLy9foBPJpVb7D///8iS6AV'+
