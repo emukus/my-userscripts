@@ -41,7 +41,7 @@ function main() {
         var imdbButtons = document.querySelectorAll('.micro-button.track-event');
 
         if (imdbButtons.length > 0) {
-            var imdbBtn = imdbButtons[0].href.match(/tt(\d{7})/);
+            var imdbBtn = imdbButtons[0].href.match(/tt(\d{7,})/);
 
             if (imdbBtn) {
                 var imdbId = imdbBtn[1];
