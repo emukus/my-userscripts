@@ -7,7 +7,7 @@
 // @contributor LeLobster
 // @icon        https://letterboxd.com/favicon.ico
 // @match       *://letterboxd.com/film/*
-// @version     1.9
+// @version     2.0
 // @grant       none
 // ==/UserScript==
 
@@ -101,6 +101,7 @@ function main() {
         iconElt = document.querySelectorAll('#tor-icons');
         iconElt[0].style = 'display: table; margin: 0 auto;'
         iconElt[1].style = 'display: table; margin: 0 auto;'
+        iconElt[2].style = 'display: table; margin: 0 auto;'
 
         iconRow = iconElt[0].childNodes[0].childNodes
         for (i = 0, j = iconRow.length; i < j; i++) {
@@ -111,6 +112,11 @@ function main() {
         for (i = 0, j = iconRow2.length; i < j; i++) {
             iconRow2[i].style = 'padding: 2px 4px 0px 4px;'
             iconRow2[i].id = 'tor-icon';
+        }
+        iconRow3 = iconElt[2].childNodes[0].childNodes
+        for (i = 0, j = iconRow3.length; i < j; i++) {
+            iconRow3[i].style = 'padding: 2px 4px 0px 4px;'
+            iconRow3[i].id = 'tor-icon';
         }
         console.log('CSS applied.')
     }
@@ -431,6 +437,26 @@ function main() {
     '7Yfx+6e256/tfYXEIGLx2LncAAAAASUVORK5CYII=';
 
     createIcon(tr, 'MyAnimeList','https://myanimelist.net/anime.php?q='+filmTitle, img);
+
+    // Create a new element for the third set
+    tab = li.insertBefore(document.createElement('li'), li.lastChild);
+    div = tab.appendChild(document.createElement('div'));
+        div.id = 'tor-icons'
+    tr = div.appendChild(document.createElement('tr'));
+
+   // Parental Guide
+   img='data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB7ElEQVR4nGNgoAYwNk7jt9GNEiQFe6jkssMNSItu+Wqlk/AfhFcs2vH38oXbf0I8Sv+B+P5OBf8vnb/1Z/3KfX9hajobF/xdu2L3abgBs6euf+NtlweWDHIv/X/8yKX/86ZvAPNBuKt54f/jRy//T45sBPOdTNL+r1q68zfcgLUr9n50Mc8ASzZVzvoPAhtXH4AbsHvbif+/fv7+HxdUC+ZH+VX937Xt6C+4AZmRTV9yY1v+g/CuFXv/H9109H9ZWjeYX5s74f/Rzcf+L5m8FswH4aVT1v3fsnwXwoATfWu+/iqd9x+Gn+ZO/38zc8r/6xlT/t/ImPz/XtZUuBwM75u+EbcBD7Kn/j+X0g825ERy3/8r6ZOIN6DBvfx/vVvZ/zz7gv/3s6f9r3Qt+d/kXv6/yqX0/48SHAZcnLzxC0wi277g//X0yf+LHIv+9/pU/98a3fH/W8nc/4cSev7/KJ2L3YCbs7Z9RjZgdmD9/72xXf/nBjX83xXb+f9IQu//FJs8cHhgNeDB/F1wAwodiv5/KpoDZj/Pm/G/wLHwf493NZh+njsDuwFHetfCDfiO5E8Y/lgIMRAZ756FZMC6vlUr9k1Y829//+r/xODdE1b/v3Tm6mWUDPX69Wvehw8fChKL////z0JyrsUGAG3u+1rvQVfoAAAAAElFTkSuQmCC';
+
+    createIcon(tr, 'IMDb PG guide','https://www.imdb.com/title/tt'+imdbId+'/parentalguide', img);
+
+   // Quotes
+   img='data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAvElEQVR4nM3QwQnCQBAF0'+
+   'AE70LM1qKBew0wgFZgCtAkLsBDR7CSSAmzAIrx59iQKM7lGFkHUkOzGi36Yy74PO7sAf5Mw0QlxEdsJUh2'+
+   '3ckxkQazl6yDL3NcBWXaVgpHM14FY8s+CPfN1QNZ1U8HlEBgZIsupruDySh4r1xdcDsi6R6PmK4/ya5dYL'+
+   '8SybOVxXnbCVEZo5IBGz+Hm1vN2Yl09P8foEbcyeH9zs0OUFX1KdEasU3tTZW2H/zZ3MYQWMoe75UQAAAA'+
+   'ASUVORK5CYII=';
+
+    createIcon(tr, 'IMDb Quotes','https://www.imdb.com/title/tt'+imdbId+'/quotes', img);
 
     applyCSS();
 
