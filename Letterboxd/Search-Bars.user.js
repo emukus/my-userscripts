@@ -7,7 +7,7 @@
 // @contributor LeLobster
 // @icon        https://letterboxd.com/favicon.ico
 // @match       *://letterboxd.com/film/*
-// @version     2.0
+// @version     1.9
 // @grant       none
 // ==/UserScript==
 
@@ -445,7 +445,15 @@ function main() {
     tr = div.appendChild(document.createElement('tr'));
 
    // Parental Guide
-   img='data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB7ElEQVR4nGNgoAYwNk7jt9GNEiQFe6jkssMNSItu+Wqlk/AfhFcs2vH38oXbf0I8Sv+B+P5OBf8vnb/1Z/3KfX9hajobF/xdu2L3abgBs6euf+NtlweWDHIv/X/8yKX/86ZvAPNBuKt54f/jRy//T45sBPOdTNL+r1q68zfcgLUr9n50Mc8ASzZVzvoPAhtXH4AbsHvbif+/fv7+HxdUC+ZH+VX937Xt6C+4AZmRTV9yY1v+g/CuFXv/H9109H9ZWjeYX5s74f/Rzcf+L5m8FswH4aVT1v3fsnwXwoATfWu+/iqd9x+Gn+ZO/38zc8r/6xlT/t/ImPz/XtZUuBwM75u+EbcBD7Kn/j+X0g825ERy3/8r6ZOIN6DBvfx/vVvZ/zz7gv/3s6f9r3Qt+d/kXv6/yqX0/48SHAZcnLzxC0wi277g//X0yf+LHIv+9/pU/98a3fH/W8nc/4cSev7/KJ2L3YCbs7Z9RjZgdmD9/72xXf/nBjX83xXb+f9IQu//FJs8cHhgNeDB/F1wAwodiv5/KpoDZj/Pm/G/wLHwf493NZh+njsDuwFHetfCDfiO5E8Y/lgIMRAZ756FZMC6vlUr9k1Y829//+r/xODdE1b/v3Tm6mWUDPX69Wvehw8fChKL////z0JyrsUGAG3u+1rvQVfoAAAAAElFTkSuQmCC';
+   img='data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB7ElEQVR4nGNgoAYwNk7jt9G'+
+   'NEiQFe6jkssMNSItu+Wqlk/AfhFcs2vH38oXbf0I8Sv+B+P5OBf8vnb/1Z/3KfX9hajobF/xdu2L3abgBs6euf+'+
+   'NtlweWDHIv/X/8yKX/86ZvAPNBuKt54f/jRy//T45sBPOdTNL+r1q68zfcgLUr9n50Mc8ASzZVzvoPAhtXH4Abs'+
+   'Hvbif+/fv7+HxdUC+ZH+VX937Xt6C+4AZmRTV9yY1v+g/CuFXv/H9109H9ZWjeYX5s74f/Rzcf+L5m8FswH4aVT'+
+   '1v3fsnwXwoATfWu+/iqd9x+Gn+ZO/38zc8r/6xlT/t/ImPz/XtZUuBwM75u+EbcBD7Kn/j+X0g825ERy3/8r6ZO'+
+   'IN6DBvfx/vVvZ/zz7gv/3s6f9r3Qt+d/kXv6/yqX0/48SHAZcnLzxC0wi277g//X0yf+LHIv+9/pU/98a3fH/W8'+
+   'nc/4cSev7/KJ2L3YCbs7Z9RjZgdmD9/72xXf/nBjX83xXb+f9IQu//FJs8cHhgNeDB/F1wAwodiv5/KpoDZj/Pm'+
+   '/G/wLHwf493NZh+njsDuwFHetfCDfiO5E8Y/lgIMRAZ756FZMC6vlUr9k1Y829//+r/xODdE1b/v3Tm6mWUDPX6'+
+   '9Wvehw8fChKL////z0JyrsUGAG3u+1rvQVfoAAAAAElFTkSuQmCC';
 
     createIcon(tr, 'IMDb PG guide','https://www.imdb.com/title/tt'+imdbId+'/parentalguide', img);
 
