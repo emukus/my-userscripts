@@ -4,7 +4,7 @@
 // @namespace      emukus
 // @homepage       https://github.com/emukus/
 // @description    Adds external links in the end of the title
-// @version        1.6
+// @version        1.7
 // @icon           https://cdn.myanimelist.net/images/favicon.ico
 // @match          https://myanimelist.net/anime/*
 // @run-at         document-end
@@ -44,6 +44,22 @@
 	    var animeTitle = document.querySelector( '.title-name' ).firstChild.textContent.trim();
 		var elTitle = document.querySelector( '.title-name' );
 
+        // Extract MAL ID from URL
+        function extractMALId(url) {
+            var matches = url.match(/\/anime\/(\d+)\//);
+            if (matches && matches.length > 1) {
+                return matches[1];
+            } else {
+                return null;
+            }
+        }
+
+        // MAL ID exception for Sonarr
+        var malId = extractMALId(pageUrl);
+        var f = getFirstItem(sites, 'name', 'Sonarr');
+        sites[f].url = "http://localhost:8989/add/new?term=mal:" + malId;
+
+
 		// AniDB ID exception for AnimeTosho
 		var anidbButton = document.querySelector('.external_links a[href*="anidb.net/perl-bin/animedb.pl?show=anime&aid="]');
 		var g = getFirstItem(sites, 'name', 'AnimeTosho');
@@ -51,6 +67,7 @@
 			var anidbId = anidbButton.href.match(/\&aid=(\d+)/)[1];
 			sites[g].url = "https://animetosho.org/series/" + anidbId;
 		}
+
 
 		animeTitle = animeTitle
 			.replace( "(", "" )
