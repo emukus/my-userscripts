@@ -7,7 +7,7 @@
 // @contributor LeLobster
 // @icon        https://letterboxd.com/favicon.ico
 // @match       *://letterboxd.com/film/*
-// @version     1.9
+// @version     2.0
 // @grant       none
 // ==/UserScript==
 
@@ -465,6 +465,16 @@ function main() {
    'ASUVORK5CYII=';
 
     createIcon(tr, 'IMDb Quotes','https://www.imdb.com/title/tt'+imdbId+'/quotes', img);
+
+   // Wikipedia
+   img='data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABO0lEQVQ4jaWTMaoCMRCG/wnvDtELmHaxdAmIXcheZA9hYeMNxNZq'+
+   'sc81lu0X+2VLTzBj8V5C8uQ9UAcG5k+YP5kvhPATzCx4IZRSBAD0TnNuQu82J5NPmgFADcMAay2UUjifzw'+
+   'AA733S8zzDWgtrLeZ5xvV6xXK5hPcet9vte/5pmoSIJIQgURtj5HQ6CTOLc06maRJmFmaWuq5TjVg454qN'+
+   'rutEay0hBDkej8V6NC4M+r4XANL3fdo0xogxJul4UK4TxPV6Decc9vt9ArTb7XC/35MehgFVVZUUc7cQgh'+
+   'CRjOOYTtNaS9d1wszStm3BgpnlKzfz3mO1WuFyuWCz2aBpGlhrcTgcsN1uAQCLxeLvG0RIRJRmjS9U13XB'+
+   '5wlinlrrgnTbtk/w/jWIDPL8PXvMzz9TzuLVZgB4AExRsO8ga8hoAAAAAElFTkSuQmCC';
+
+    createIcon(tr, 'Wikipedia','https://en.wikipedia.org/w/index.php?search='+filmTitle+'&go=Go', img);
 
     applyCSS();
 
