@@ -4,7 +4,7 @@
 // @namespace      emukus
 // @homepage       https://github.com/emukus/
 // @description    Adds external links in the end of the title
-// @version        1.7
+// @version        1.7.1
 // @icon           https://cdn.myanimelist.net/images/favicon.ico
 // @match          https://myanimelist.net/anime/*
 // @run-at         document-end
@@ -46,7 +46,7 @@
 
         // Extract MAL ID from URL
         function extractMALId(url) {
-            var matches = url.match(/\/anime\/(\d+)\//);
+            var matches = url.match(/\/anime\/(\d+)\/?/);
             if (matches && matches.length > 1) {
                 return matches[1];
             } else {
